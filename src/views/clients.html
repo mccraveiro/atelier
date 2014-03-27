@@ -1,0 +1,34 @@
+<toolBar class="clientsToolBar">
+	<input type="search" results="5" name="s" ng-model="searchInput">
+	<btn ng-click="addClient()"><i class="fa fa-plus"></i>Adicionar Cliente</btn>
+</toolBar>
+<main>
+	<div class="clientList">
+		<ul ng-repeat="letter in alphabet" ng-show="(clients | filter:{name: searchInput} | firstLetter:letter:'name').length">
+			<div class="listLabel">{{letter}}</div>
+			<li ng-repeat="client in clients | filter:{name: searchInput} | orderBy:'name' | firstLetter:letter:'name'" ng-class="{active: activeClient.name == client.name}" ng-click="selectClient(client)">{{client.name}}</li>
+		</ul>
+		<ul ng-show="(clients | filter:{name: searchInput} | firstLetter:'!A-Z':'name').length">
+			<div class="listLabel">Others</div>
+			<li ng-repeat="client in clients | filter:{name: searchInput} | orderBy:'name' | firstLetter:'!A-Z':'name'" ng-class="{active: activeClient.name == client.name}" ng-click="selectClient(client)">{{client.name}}</li>
+		</ul>
+	</div>
+	<div class="clientInfo">
+		<span ng-hide="activeClient" class="help">Selecione um cliente</span>
+		<span ng-show="activeClient" class="clientName">{{activeClient.name}}</span>
+		<span ng-show="activeClient" class="clientTitle">Gerente de Produção, Embraer</span>
+		<span ng-show="activeClient" class="clientContact"><i class="fa fa-phone"></i>(12) 3207-3209<br><i class="fa fa-phone"></i>(12) 99121-9460<br><i class="fa fa-envelope"></i>frodrigues2002@yahoo.com.br</span>
+		<span ng-show="activeClient" class="clientAddress"><i class="fa fa-map-marker"></i>Avenida Alfredo Ignácio Nogueira Penido, 470, apto 1104<br>Jardim Aquárius, SJC - SP, Brasil.<br>CEP 12.246-000</span>
+		<span ng-show="activeClient" class="clientReferredBy">Indicado(a) por: Elisangela Aparecida da Silveira</span>
+		<span ng-show="activeClient" class="clientNotes">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
+	</div>
+</main>
+<!-- TODO: Finish confirm window when changes were not saved -->
+<div class="confirm" ng-show="confirm.show">
+	<titleBar ng-controller="TitleBarCtrl">
+		<btn class="close" ng-click="confirm.close()"></btn>
+	</titleBar>
+	{{confirm.message}}
+</div>
+<div class="confirmBg" ng-show="confirm.show"></div>

@@ -1,3 +1,3 @@
 # Atelier
 
-Custom invoice and client manager 
+Custom invoice and client manager

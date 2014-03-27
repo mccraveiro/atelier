@@ -1,0 +1,24 @@
+<toolBar class="cal-toolbar">
+	<btn class="prev-month" ng-click="prevMonth()"><i class="fa fa-angle-left"></i></btn>
+	<btn class="next-month" ng-click="nextMonth()"><i class="fa fa-angle-right"></i></btn>
+	<div class="current-month">
+		{{current.month.name}} de {{current.year}}
+	</div>
+	<btn class="right"><i class="fa fa-plus"></i>Agendar atendimento</btn>
+</toolBar>
+<main class="cal-main">
+	<div class="cal-header">
+		<div>Dom</div>
+		<div>Seg</div>
+		<div>Ter</div>
+		<div>Qua</div>
+		<div>Qui</div>
+		<div>Sex</div>
+		<div>Sáb</div>
+	</div>
+	<div class="cal-row" ng-repeat="week in current.calendar">
+		<div ng-repeat="day in week track by $index">
+			<div class="day-label">{{day}}</div>
+		</div>
+	</div>
+</main>

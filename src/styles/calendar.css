@@ -1,0 +1,58 @@
+.cal-toolbar .current-month {
+	color: #FFFFFF;
+	float: left;
+	font-size: 14px;
+	line-height: 40px;
+	padding: 0 15px;
+}
+
+.cal-toolbar btn.prev-month,
+.cal-toolbar btn.next-month {
+	float: left;
+}
+
+.cal-toolbar btn.prev-month i,
+.cal-toolbar btn.next-month i {
+	margin: 5px;
+}
+
+.cal-toolbar btn.right {
+	float: right;
+}
+
+.cal-main {
+	flex-direction: column;
+}
+
+.cal-header {
+	display: flex;
+	flex: 0 0 40px;
+	flex-direction: row;
+}
+
+.cal-header > div {
+	border: 1px solid #F3F3F3;
+	flex: 1;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.cal-row {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+}
+
+.cal-row > div {
+	border: 1px solid #F3F3F3;
+	flex: 1;
+}
+
+.cal-row > div > div {
+	color: #666666;
+	font-size: 12px;
+	margin: 8px;
+}

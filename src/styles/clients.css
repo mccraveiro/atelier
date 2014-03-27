@@ -1,0 +1,148 @@
+.clientsToolBar input[type=search] {
+	margin: 9px 20px;
+	width: 240px;
+}
+
+.clientsToolBar btn {
+	float: right;
+}
+
+.clientList {
+	flex: 2 0 0;
+	max-width: 400px;
+	overflow: auto;
+}
+
+.clientList ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.clientList ul .listLabel {
+	background-color: #DEDEDE;
+	box-sizing: border-box;
+	color: #000000;
+	font-size: 16px;
+	font-weight: bold;
+	height: 30px;
+	line-height: 20px;
+	padding: 5px 20px;
+	text-align: center;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.clientList ul li {
+	border-bottom: 1px solid #DEDEDE;
+	box-sizing: border-box;
+	color: #333333;
+	cursor: pointer;
+	font-size: 13px;
+	font-weight: 400;
+	height: 40px;
+	line-height: 20px;
+	padding: 10px 20px;
+	vertical-align: baseline;
+	width: 100%;
+}
+
+.clientList ul li:hover,
+.clientList ul li.active {
+	font-weight: 900;
+}
+
+.clientInfo {
+	align-items: center;
+	background-color: #FFFFFF;
+	border-left: 1px solid #DEDEDE;
+	display: flex;
+	flex: 3 0 0;
+	flex-direction: column;
+}
+
+.clientInfo span {
+	box-sizing: border-box;
+	display: block;
+}
+
+.clientInfo span i {
+	margin-right: 8px;
+}
+
+.clientInfo .help {
+	color: #777777;
+	font-size: 16px;
+	font-weight: 300;
+	padding: 40px;
+}
+
+.clientInfo .clientName {
+	font-size: 40px;
+	font-weight: 300;
+	padding: 30px 40px 5px 40px;
+	width: 100%;
+}
+
+.clientInfo .clientTitle {
+	font-size: 16px;
+	font-weight: 300;
+	padding: 5px 40px 20px 40px;
+	width: 100%;
+}
+
+.clientInfo .clientContact {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 23px;
+	padding: 5px 40px 20px 40px;
+	width: 100%;
+}
+
+.clientInfo .clientAddress {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 23px;
+	padding: 5px 40px 20px 40px;
+	width: 100%;
+}
+
+.clientInfo .clientReferredBy {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 23px;
+	padding: 5px 40px 20px 40px;
+	width: 100%;
+}
+
+.clientInfo .clientNotes {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 23px;
+	padding: 5px 40px 20px 40px;
+	width: 100%;
+}
+
+.confirm {
+	background-color: #FFFFFF;
+	height: 200px;
+	left: 50%;
+	margin-left: -105px;
+	margin-top: -100px;
+	position: absolute;
+	top: 50%;
+	width: 300px;
+	z-index: 2000;
+}
+
+.confirmBg {
+	background-color: #FFFFFF;
+	height: 100%;
+	left: 90px;
+	opacity: 0.6;
+	position: absolute;
+	top: 26px;
+	width: 100%;
+	z-index: 1000;
+}

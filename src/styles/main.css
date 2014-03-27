@@ -1,0 +1,125 @@
+html, body {
+	font-family: 'Lato', sans-serif;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
+}
+
+body {
+	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+}
+
+btn {
+	display: block;
+}
+
+titleBar {
+	-webkit-app-region: drag;
+	background-color: #F7F7F7;
+	height: 26px;
+}
+
+titleBar btn {
+	display: block;
+	border-radius: 5px;
+	cursor: pointer;
+	float: right;
+	height: 10px;
+	margin: 8px 8px 8px 0;
+	width: 10px;
+}
+
+titleBar .close {
+	background-color: #F58079;
+}
+
+titleBar .maximize {
+	background-color: #F5CD79;
+}
+
+titleBar .minimize {
+	background-color: #F5CD79;
+}
+
+app {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+}
+
+nav {
+	background-color: #002635;
+	box-sizing: border-box;
+	flex: 0 0 90px;
+	padding-top: 40px;
+}
+
+nav btn {
+	color: #FFFFFF;
+	cursor: pointer;
+	font-size: 11px;
+	font-weight: 200;
+	padding: 20px 0;
+	text-align: center;
+	width: 100%;
+}
+
+nav btn.active,
+nav btn:hover {
+	background: #013440;
+}
+
+nav btn i {
+	margin-bottom: 5px;
+}
+
+.content {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+toolBar {
+	background-color: #D97925;
+	flex: 0 0 40px;
+}
+
+toolBar input,
+toolBar btn {
+	float: left;
+}
+
+toolBar btn {
+	color: #FFFFFF;
+	cursor: pointer;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	vertical-align: middle;
+}
+
+toolBar btn:hover {
+	background-color: #EFE7BE;
+	color: #000000;
+}
+
+toolBar btn i {
+	margin-right: 8px;
+}
+
+main {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+}
+
+input[type=search] {
+	font-size: 16px;
+}
