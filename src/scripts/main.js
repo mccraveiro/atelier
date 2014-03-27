@@ -1,11 +1,15 @@
-var app = app || angular.module('app', []);
+var app = angular.module('atelier', [
+    'atelier.calendar',
+    'atelier.clients',
+    'atelier.titleBar'
+]);
 
 // Filter array by first letter
 // list: input array
 // letter: letter to filter or '!A-Z' to filter words outside A-Z range
 // key: optional key in list array
 app.filter("firstLetter", function () {
-    
+
     return function (list, letter, key) {
 
         if (!(list instanceof Array)) return list;
@@ -13,7 +17,7 @@ app.filter("firstLetter", function () {
 
         var result = [];
         var value = "";
-        
+
         for (var i = 0; i < list.length; i++) {
 			value = key ? list[i][key] : list[i];
 

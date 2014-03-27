@@ -1,31 +1,34 @@
-var app = app || angular.module('app', []);
+(function () {
+	'use strict';
 
-app.controller('TitleBarCtrl', ['$scope', function($scope) {
+		angular.module('atelier.titleBar', [])
+			.controller('TitleBarCtrl', ['$scope', function($scope) {
 
-	var w = chrome.app.window.current();
+		var w = chrome.app.window.current();
 
-	// bring to foreground
-	w.show();
+		// bring to foreground
+		w.show();
 
-	$scope.Minimize = function () {
+		$scope.Minimize = function () {
 
-		if (w.isMinimized()) {
-			w.restore();
-		} else {
-			w.minimize();
-		}
-	};
+			if (w.isMinimized()) {
+				w.restore();
+			} else {
+				w.minimize();
+			}
+		};
 
-	$scope.Maximize = function () {
+		$scope.Maximize = function () {
 
-		if (w.isMaximized()) {
-			w.restore();
-		} else {
-			w.maximize();
-		}
-	};
+			if (w.isMaximized()) {
+				w.restore();
+			} else {
+				w.maximize();
+			}
+		};
 
-	$scope.Close = function () {
-		w.close();
-	};
-}]);
+		$scope.Close = function () {
+			w.close();
+		};
+	}]);
+}());
